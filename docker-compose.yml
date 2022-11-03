@@ -1,2 +1,9 @@
 version: '3'
-# services:
+services:
+  frontend:
+    build: frontend
+    ports:
+      - "4200:4200"
+      - "9876:9876"
+    env_file:
+      - .env
